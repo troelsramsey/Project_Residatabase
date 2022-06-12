@@ -1,0 +1,45 @@
+{% extends "layout.html" %}
+
+{% block content %}
+    <h1>Residatabase</h1>
+        <article class="media content-section">
+            <form method = "POST">
+                {{ form.csrf_token }}
+                {{ form.deposit.label(class="form-label")}}
+            
+                {{form.deposit(class="form-control")}}
+                <br/>
+                {{ form.rent.label(class="form-label")}}
+            
+                {{form.rent(class="form-control")}}
+                <br/>
+                {{ form.kvm.label(class="form-label")}}
+            
+                {{form.kvm(class="form-control")}}
+                <br/>
+                {{ form.dist.label(class="form-label")}}
+            
+                {{form.dist(class="form-control")}}
+                <br/>
+                <!-- {{ form.sort.label(class="form-label")}}
+            
+                {{form.sort(class="form-control")}}
+                <br/> -->
+            
+                {{ form.Submit(class="btn
+                btn-primary")}}
+            </form>
+        </article>
+{% endblock content %}
+
+
+<!-- 
+<label for="fname">Maximum possible Deposit:</label><br>
+<input type="text" id="d_id" name="deposit" value=""><br>
+<label for="lname">Maximum monthly rent:</label><br>
+<input type="text" id="r_id" name="rent" value=""><br><br>
+<label for="fname">Minimum Square meters:</label><br>
+<input type="text" id="s_id" name="kvm" value=""><br>
+<label for="lname">Distance to university:</label><br>
+<input type="text" id="l_id" name="dist" value=""><br><br>
+<input type="submit" id='Submit' value="Submit"> -->

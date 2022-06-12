@@ -1,0 +1,25 @@
+{% extends "layout.html" %}
+{% block content %}
+    <h1>Recommendations</h1>
+        <div>
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th scope="col">Municipality</th>
+                        <th scope="col">Rent</th>
+                        <th scope="col">Size (1-5)</th>
+                        <th scope="col">Distance to UCPH</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {%for row in apt%}
+                        <tr>
+                            {%for dat in row%}
+                                <td>{{dat}}</td>
+                            {%endfor%}
+                        </tr>
+                    {%endfor%}
+                </tbody>
+            </table>
+        </div>
+{% endblock content %}
